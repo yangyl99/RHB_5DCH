@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- no change for the above declarations>-->
+    <title>Triaxial Relativistic Hartree-Bogoliubov Results Based on PC-PK1 Density Functional</title>
+   
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/pwzhao.css" rel="stylesheet">
+	
+	<!-- MathJax -->
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      TeX: {extensions: ["autobold.js"]},
+      tex2jax: {inlineMath: [['$','$']]},
+      showProcessingMessages: false,
+      messageStyle: "none"
+      });
+    </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+  <header class="navbar navbar-light navbar-fixed-top bg-faded navbar-static-top" >
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+        &#9776;
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="index.html">Triaxial Relativistic Hartree-Bogoliubov Results Based on PC-PK1 Density Functional</a>
+    </div>
+    <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+      <ul class="nav navbar-nav">
+        <a class="nav-item nav-link" href="./index.html"><b>Home</b> </a>
+		<a class="nav-item nav-link active" href="./pages/theory.html">Theoretical framework </a>
+		<li class="nav-item btn-group">
+          <a class="dropdown-toggle nav-link" id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tabulated results
+          </a>
+          <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu1">
+            <a class="dropdown-item" href="./files/data_web.txt">Ground-state properties</a>
+			<a class="dropdown-item">low-lying spectra (coming soon)</a>
+          </div>
+        </li>
+		<a class="nav-item nav-link" href="https://doi.org/10.1103/PhysRevC.104.054312"><b>Publication: Y. L. Yang, Y. K. Wang, P. W. Zhao, and Z. P. Li, Phys. Rev. C 104, 054312 (2021)</b></a>
+	  </ul>
+	  
+      <ul class="nav navbar-nav pull-xs-right ">
+        <li class="nav-item btn-group">
+          <a class="dropdown-toggle nav-link" id="dropdownMenu2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Links
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+            <a class="dropdown-item" href="https://pkunuclear.github.io">PKU nuclear physics group</a>
+            <a class="dropdown-item" href="http://www.pku.edu.cn">Peking University</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+	<div class="row">&nbsp;</div>
+	<div class="row">&nbsp;</div>
+    <div class="row">
+	  <div class="col-sm-2" align='right'><a href="http://www.pku.edu.cn"><img src="./img/PKU.jpeg" height='100', width='100'></img></a></div>
+	  <div class="col-sm-8" align=center>
+	    <div class="row">&nbsp;</div>
+		<div class="row">&nbsp;</div>
+	    <div class="row"><h3><font color="black">Triaxial Relativistic Hartree-Bogoliubov Results Based on PC-PK1 Density Functional</font></h3></div>
+	  </div>
+	  <div class="col-sm-2" align='left'><a href="http://www.swu.edu.cn"><img src="./img/SWU.jpeg" height='100', width='100'></img></a></div>
+	</div>
+  </div>
+
+  
+  <!--<div class="row">
+	  <div class="col-sm-2" align=center>&nbsp;</div>
+	  <div class="col-sm-8">
+	    <div class="card card-default">
+	      <h4 class="card-header">&nbsp;Relativistic Hartree-Bogoliubov theory</h4>
+		  <div class="card-body"><h5 class="p1">
+		    <p class="card-text">
+		    The relativistic Hartree-Bogoliubov (RHB) theory provides a unified and self-consistent treatment of mean fields and pairing correlations.
+			The RHB equation reads
+			<div class="well" align="center">
+			  $begin{pmatrix}\end$
+			</div>
+			</p>
+		  </h5></div>
+	    </div>
+	  </div>
+	  <div class="col-sm-2" align=center>&nbsp;</div>
+	</div>-->
+	<div class="row">
+	  <div class="col-sm-2" align=center>&nbsp;</div>
+	  <div class="col-sm-8" >
+	    <h2 align=center>Theoretical Framework</h2>
+		<h6 class="p1">
+	      The relativistic Hartree-Bogoliubov (RHB) theory provides a unified and self-consistent treatment of mean fields and pairing correlations, 
+		  and it is formalized by the RHB euqation
+		</h6>
+		<h6>
+		\[
+		  \begin{pmatrix}
+               \hat{h}_{D} - \lambda & \hat{\Delta} \\
+               -\hat{\Delta}^{*} & -\hat{h}_{D}^{*} + \lambda
+               \end{pmatrix}
+               \begin{pmatrix}
+                U_{k} \\
+                V_{k}
+               \end{pmatrix}
+			   =E_{k}
+               \begin{pmatrix}
+                U_{k} \\
+                V_{k}
+               \end{pmatrix}.
+		\]
+	    </h6>
+		<h6 class="p1">
+		  where $\hat{h_D}$ is the single-nucleon Dirac Hamiltonian, $\hat{\Delta}$ is hte pairing field, $U_k$ and $V_k$ are the quasiparticle wavefunctions, and $E_k$ denotes the quasiparticle energies.
+		  The Dirac Hamiltonian reads
+		<h6>
+		<h6>
+		  \[\hat{h}_D=-\mathrm{i}\boldsymbol{\alpha\cdot\nabla}+\beta(m+S)+V,\]
+		<h6>
+		<h6 class="p1">
+		  where the scalar field $S$ and the vector field $V$ are coupled with the corresponding scalar and vector densities in a self-consistent way [1,2,3,4].
+		  The matrix elements of pairing field $\hat{\Delta}$ can be written as 
+		</h6>
+		<h6>
+		  \[\Delta_{ab}=\frac{1}{2}\sum_{cd}\langle ab|V^{pp}|cd\rangle\kappa_{cd}\]
+		<h6>
+		<h6 class="p1">
+		  where $\kappa=V^*U^T$ is the pairing tensor and $V^{pp}$ is the pairing force.
+		</h6>
+		<h6 class="p1">
+		  The potential energy surface (PES) with respect to the quadrupole deformation parameters $\beta$ and $\gamma$ can be obtained by constraint calculations against mass quadrupole moments [5,6],
+		  and the lowest energy state in the PES provides the ground state at the mean field level.
+		</h6>
+		<h6 class="p1">
+		  The five-dimensional collective Hamiltonian is employed to extend the mean-field solutions to describe spectroscopic properties 
+		  and to bring beyond-mean-field dynamical correlation energies to nuclear ground states.
+		  The 5DCH is expressed in terms of the two quadrupole deformation parameters $\beta$ and $\gamma$ and three Euler angles $(\phi,\theta,\psi)\equiv\Omega$ that define the orientation of the intrinsic principal axes in the laboratory frame,
+		</h6>
+		<h6>
+		      \[\hat{H}_{\mathrm{coll}}(\beta,\gamma) = \hat{T}_{\mathrm{vib}}(\beta,\gamma) + \hat{T}_{\mathrm{rot}}(\beta,\gamma,\Omega) + V_{\mathrm{coll}}(\beta,\gamma).\]
+		</h6>
+		<h6 class="p1">
+		  It includes the vibrational kinetic energy $\hat{T}_{\mathrm{vib}}(\beta,\gamma)$, rotational kinetic energy $\hat{T}_{\mathrm{rot}}$, and the collective potential $V_{\mathrm{coll}}(\beta,\gamma)$, and their expressions can be seen in Refs. [5,6]. The collective parameters including the moments of inertia $\mathcal{I}_k$, the mass parameters $B_{\beta\beta}$, $B_{\beta\gamma}$, $B_{\gamma\gamma}$, and the collective potential $V_{\mathrm{coll}}(\beta,\gamma)$ governs the entire dynamics of the 5DCH. As in Refs.[5,6], the collective parameters are determined by the self-consistent RHB calculations with no adjustable parameters.
+		  The moments of inertia are computed by the Inglis-Belyaev formula, the mass parameters are calculated in the cranking approximation, and the collective potential is obtained by subtracting the energy of the zero-point motion from the total energy surface.
+		  Diagonalization of the 5DCH yields the energy of the collective ground state $0_1^+$ and other low-lying excited states.
+		</h6>
+		<h2 align=center>References</h2>
+		<h6>[1] P. Ring, Prog. Part. Nucl. Phys. 37 (1996) 193-263. <a href="http://doi.org/10.1016/0146-6410(96)00054-3">doi:10.1016/0146-6410(96)00054-3</a></h6>
+		<h6>[2] D. Vretenar, A. V. Afanasjev, G. A. Lalazissis, P. Ring, Phys. Rep. 409 (2005) 101-259. <a href="http://doi.org/10.1016/j.physrep.2004.10.001">doi:10.1016/j.physrep.2004.10.001</a>.</h6>
+		<h6>[3] J. Meng, H. Toki, S. Zhou, S. Zhang, W. Long, L. Geng, Prog. Part. Nucl. Phys. 57 (2006) 470-563. <a href="http://doi.org/10.1016/j.ppnp.2005.06.001">doi:10.1016/j.ppnp.2005.06.001</a>.</h6>
+		<h6>[4] T. Niks&#774;ic&#769;, D. Vretenar, P. Ring, Prog. Part. Nucl. Phys. 66 (2011) 519-548. <a href="http://doi.org/10.1016/j.ppnp.2011.01.055">doi:10.1016/j.ppnp.2011.01.055</a>.</h6>
+		<h6>[5] T. Niks&#774;ic&#769;, Z. P. Li, D. Vretenar, L. Pro&#769;ochniak, J. Meng, P. Ring, Phys. Rev. C 79 (2009) 034303. <a href="http://doi.org/10.1103/PhysRevC.79.034303">doi:10.1103/PhysRevC.79.034303</a>.</h6>
+		<h6>[6] Z. P. Li, T. Niks&#774;ic&#769;, D. Vretenar, J. Meng, G. A. Lalazissis, P. Ring, Phys. Rev. C 79 (2009) 054301. <a href="http://doi.org/10.1103/PhysRevC.79.054301">doi:10.1103/PhysRevC.79.054301</a>.</h6>
+	  </div>
+	  <div class="col-sm-2" align=center>&nbsp;</div>
+	</div>
+  
+
+
+  
+  
+  <!-- Site footer -->
+  <footer class="footer">
+    <p>&copy; 2022 Company, Inc.</p>
+  </footer>
+
+
+
+  <footer class="bd-footer text-muted">
+  <div class="container">
+    <span>&copy; January 2022 Yilong Yang, Pengwei Zhao</span>
+    <br>
+    <span>Powered by <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, <a href="http://jquery.com/">jQuery</a>, <a href="http://www.mathjax.org/">MathJax</a>, and <a href="https://www.glyphicons.com/">Glyphicon</a>.
+    </span>
+  </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/obs.js"></script>
+  
+</body>
+
+<script type="text/javascript" src="./js/search.js"></script>
+</html>
