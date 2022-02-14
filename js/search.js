@@ -113,7 +113,7 @@ function clientProperty(){
   var div1 = document.getElementById('result');
   div1.innerHTML = "<div class='row'>Click on a nuclide below</div>";
   if ((xReturn>0) && (yReturn>0) && (flag<0)) {
-  div1.innerHTML = "<div class='row'>"+elementName[zNum]+' '+aNum+' (Z='+zNum+', N='+nNum+')'+"</div>";
+  div1.innerHTML = "<div class='row'><sup><sup>"+aNum+"</sup></sup>"+elementSymbol[zNum]+' (Z='+zNum+', N='+nNum+')'+"</div>";
   }
   }
 }
