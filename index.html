@@ -81,16 +81,12 @@
 	  <div class="row">
 	    <form class="form-inline">
 		  <div class="form-group">
-		    <label for="zNum">&nbsp;&nbsp;Z:&nbsp;&nbsp;</label>
-	        <input type="text" class="form-control" name="zNum" placeholder="proton number 8<=Z<=104">
-		  </div>
-		  <div class="form-group">
-	        <label for="nNum">&nbsp;&nbsp;N:&nbsp;&nbsp;</label>
-	        <input type="text" class="form-control" name="nNum" placeholder="neutron number">
+		    <label for="element"><b>&nbsp;&nbsp;Search an even-even nuclide:&nbsp;&nbsp;</b></label>
+	        <input type="text" class="form-control" name="element" placeholder="e.g. O16, Sn100">
 		  </div>
 		  <div class="form-group">
 		  <label for="submitNZ">&nbsp;&nbsp;</label>
-          <button type="button" name="submitNZ" class="btn btn-primary" onclick="document.location=linkZN(this.form.zNum.value,this.form.nNum.value)" onsubmit="document.location=linkZN(this.form.zNum.value,this.form.nNum.value)"> Search </button>
+          <button type="button" name="submitNZ" class="btn btn-primary" onclick="document.location=elementZN(this.form.element.value)" onsubmit="document.location=elementZN(this.form.element.value)"> Submit </button>
 	      </div>
 	    </form>
 	  </div>

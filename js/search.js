@@ -1,6 +1,6 @@
 
 function transform(CC,t){
-for (var i=0;i<CC.length;i++)
+for (var i=0;i<CC.length;i++){
    if (isNaN(CC.charAt(i))) {
      CC="k";
      if (t==1) {
@@ -9,7 +9,7 @@ for (var i=0;i<CC.length;i++)
      if (t==2) {
         alert("Enter a positive integer number of neutrons !");
                }
-                            }
+}}
    return CC;
 }
 
@@ -188,8 +188,25 @@ if (flag==-1) {
 return m;
 }
 
+function elementZN(name){
+	var elementSymbol= new Array("N","H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg");
+	var idx = 0;
+	var cc = "cc";
+	for (var i=0;i<name.length;i++){
+		cc = name.charAt(i);
+		if (!isNaN(cc)) {
+		idx = i;
+		break
+		}
+	}
+	var symbol = name.slice(0, idx);
+	var aNum = name.slice(idx, name.length);
+	var zNum = elementSymbol.indexOf(symbol);
+	var m = linkZN(parseInt(zNum), parseInt(aNum)-parseInt(zNum));
+	return m;
+}
 
-function linkZN(cZ,cN){
+function linkZN(cZ, cN){
   var m="./index.html";
   var drip=new Array(104);
   for (var i=1;i<105;i++)
@@ -250,21 +267,16 @@ function linkZN(cZ,cN){
   drip[100][1]="132";drip[100][2]="258";
   drip[102][1]="138";drip[102][2]="258";
   drip[104][1]="142";drip[104][2]="258";
-  newZ=transform(cZ,1);
-  newN=transform(cN,2);
-  cZ=newZ;cN=newN;
-  var zNum=parseInt(cZ);
-  var nNum=parseInt(cN);
-  var iy=parseInt(cZ);
-  var ix=parseInt(cN);
-  d1=nNum-drip[iy][1]+1;
-  d2=nNum-drip[iy][2]-1;
+  ix = parseInt(cN)
+  iy = parseInt(cZ)
+  d1=ix-drip[iy][1]+1;
+  d2=ix-drip[iy][2]-1;
   d3=ix%2-1;
   d4=iy%2-1;
   flag=d1*d2*d3*d4;
   if ((iy < 8) || (iy > 104)) {alert("Proton number out of range 8<=Z<=104!");var m="./index.html#detailedResults";return m;}
-  if (d3 == 0) {alert("Enter an even number of neutrons !");var m="./index.html#detailedResults";return m;}
-  if (d4 == 0) {alert("Enter an even number of protons !");var m="./index.html#detailedResults";return m;}
+  if (d3 == 0) {alert("Please search an even-even nuclide !");var m="./index.html#detailedResults";return m;}
+  if (d4 == 0) {alert("Please search an even-even nuclide !");var m="./index.html#detailedResults";return m;}
   if (flag>0) flag=1;
   if (flag<=0) flag=-1;
   if (flag==1){
@@ -272,13 +284,13 @@ function linkZN(cZ,cN){
     var jn=parseFloat(cN);
     if ((iz+jn!=0)){
     if (d1<0){
-        alert("Nucleus outside the proton driplines !");
+        alert("Nuclide outside the proton driplines !");
         var m="./index.html#detailedResults";
 		return m;
                      }
                      }
     if (d2>0){
-        alert("Nucleus outside the neutron driplines !");
+        alert("Nuclide outside the neutron driplines !");
       var m="./index.html#detailedResults";
 	  return m;
                    }
