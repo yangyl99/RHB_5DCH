@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- no change for the above declarations>-->
-    <title>Triaxial Relativistic Hartree-Bogoliubov Results Based on PC-PK1 Density Functional</title>
+    <title>Triaxial Relativistic Hartree-Bogoliubov Results with the PC-PK1 Density Functional</title>
    
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/pwzhao.css" rel="stylesheet">
@@ -29,7 +29,7 @@
       <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
         &#9776;
       </button>
-      <a class="navbar-brand hidden-sm-up" href="index.html">Triaxial Relativistic Hartree-Bogoliubov Results Based on PC-PK1 Density Functional</a>
+      <a class="navbar-brand hidden-sm-up" href="index.html">Triaxial Relativistic Hartree-Bogoliubov Results with the PC-PK1 Density Functional</a>
     </div>
     <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
       <ul class="nav navbar-nav">
@@ -55,6 +55,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
             <a class="dropdown-item" href="https://pkunuclear.github.io">PKU nuclear physics group</a>
             <a class="dropdown-item" href="http://www.pku.edu.cn">Peking University</a>
+			<a class="dropdown-item" href="http://www.swu.edu.cn/">Southwest University</a>
           </div>
         </li>
       </ul>
@@ -70,7 +71,7 @@
 	  <div class="col-sm-8" align=center>
 	    <div class="row">&nbsp;</div>
 		<div class="row">&nbsp;</div>
-	    <div class="row"><h3><font color="black">Triaxial Relativistic Hartree-Bogoliubov Results Based on PC-PK1 Density Functional</font></h3></div>
+	    <div class="row"><h3><font color="black">Triaxial Relativistic Hartree-Bogoliubov Results with the PC-PK1 Density Functional</font></h3></div>
 	  </div>
 	  <div class="col-sm-2" align='left'><a href="http://www.swu.edu.cn"><img src="./img/SWU.jpeg" height='100', width='100'></img></a></div>
 	</div>
@@ -121,7 +122,7 @@
 		\]
 	    </h6>
 		<h6 class="p1">
-		  where ${h_D}$ is the single-nucleon Dirac Hamiltonian, ${\Delta}$ is hte pairing field, $U_k$ and $V_k$ are the quasiparticle wavefunctions, and $E_k$ denotes the quasiparticle energies.
+		  where ${h_D}$ is the single-nucleon Dirac Hamiltonian, ${\Delta}$ is the pairing field, $U_k$ and $V_k$ are the quasiparticle wavefunctions, and $E_k$ denotes the quasiparticle energies.
 		  The Dirac Hamiltonian reads
 		<h6>
 		<h6>
@@ -135,7 +136,8 @@
 		  \[\Delta_{ab}=\frac{1}{2}\sum_{cd}\langle ab|V^{pp}|cd\rangle\kappa_{cd}\]
 		<h6>
 		<h6 class="p1">
-		  where $\kappa=V^*U^T$ is the pairing tensor and $V^{pp}$ is the pairing force.
+		  where $\kappa=V^*U^T$ is the pairing tensor and $V^{pp}$ is the pairing force. 
+		  For present results, the PC-PK1 relativistic density functional [5] and a finite-range separable pairing force with the pairing strength $G=728 \mathrm{MeV\cdot fm}^3$ [6] are employed.
 		</h6>
 		<h6 class="p1">
 		  The potential energy surface (PES) with respect to the quadrupole deformation parameters $\beta$ and $\gamma$ can be obtained by constraint calculations against mass quadrupole moments [5,6],
@@ -150,17 +152,19 @@
 		      \[{H}_{\mathrm{coll}}(\beta,\gamma) = {T}_{\mathrm{vib}}(\beta,\gamma) + {T}_{\mathrm{rot}}(\beta,\gamma,\Omega) + V_{\mathrm{coll}}(\beta,\gamma).\]
 		</h6>
 		<h6 class="p1">
-		  It includes the vibrational kinetic energy ${T}_{\mathrm{vib}}(\beta,\gamma)$, rotational kinetic energy ${T}_{\mathrm{rot}}$, and the collective potential $V_{\mathrm{coll}}(\beta,\gamma)$, and their expressions can be seen in Refs. [5,6]. The collective parameters including the moments of inertia $\mathcal{I}_k$, the mass parameters $B_{\beta\beta}$, $B_{\beta\gamma}$, $B_{\gamma\gamma}$, and the collective potential $V_{\mathrm{coll}}(\beta,\gamma)$ governs the entire dynamics of the 5DCH. As in Refs.[5,6], the collective parameters are determined by the self-consistent RHB calculations with no adjustable parameters.
+		  It includes the vibrational kinetic energy ${T}_{\mathrm{vib}}(\beta,\gamma)$, rotational kinetic energy ${T}_{\mathrm{rot}}$, and the collective potential $V_{\mathrm{coll}}(\beta,\gamma)$, and their expressions can be seen in Refs. [7,8]. The collective parameters including the moments of inertia $\mathcal{I}_k$, the mass parameters $B_{\beta\beta}$, $B_{\beta\gamma}$, $B_{\gamma\gamma}$, and the collective potential $V_{\mathrm{coll}}(\beta,\gamma)$ governs the entire dynamics of the 5DCH. As in Refs.[5,6], the collective parameters are determined by the self-consistent RHB calculations with no adjustable parameters.
 		  The moments of inertia are computed by the Inglis-Belyaev formula, the mass parameters are calculated in the cranking approximation, and the collective potential is obtained by subtracting the energy of the zero-point motion from the total energy surface.
 		  Diagonalization of the 5DCH yields the energy of the collective ground state $0_1^+$ and other low-lying excited states.
 		</h6>
 		<h2 align=center>References</h2>
-		<h6>[1] P. Ring, Prog. Part. Nucl. Phys. 37 (1996) 193-263. <a href="http://doi.org/10.1016/0146-6410(96)00054-3">doi:10.1016/0146-6410(96)00054-3</a></h6>
+		<h6>[1] P. Ring, Prog. Part. Nucl. Phys. 37 (1996) 193-263. <a href="http://doi.org/10.1016/0146-6410(96)00054-3">doi:10.1016/0146-6410(96)00054-3</a>.</h6>
 		<h6>[2] D. Vretenar, A. V. Afanasjev, G. A. Lalazissis, P. Ring, Phys. Rep. 409 (2005) 101-259. <a href="http://doi.org/10.1016/j.physrep.2004.10.001">doi:10.1016/j.physrep.2004.10.001</a>.</h6>
 		<h6>[3] J. Meng, H. Toki, S. Zhou, S. Zhang, W. Long, L. Geng, Prog. Part. Nucl. Phys. 57 (2006) 470-563. <a href="http://doi.org/10.1016/j.ppnp.2005.06.001">doi:10.1016/j.ppnp.2005.06.001</a>.</h6>
 		<h6>[4] T. Niks&#774;ic&#769;, D. Vretenar, P. Ring, Prog. Part. Nucl. Phys. 66 (2011) 519-548. <a href="http://doi.org/10.1016/j.ppnp.2011.01.055">doi:10.1016/j.ppnp.2011.01.055</a>.</h6>
-		<h6>[5] T. Niks&#774;ic&#769;, Z. P. Li, D. Vretenar, L. Pro&#769;ochniak, J. Meng, P. Ring, Phys. Rev. C 79 (2009) 034303. <a href="http://doi.org/10.1103/PhysRevC.79.034303">doi:10.1103/PhysRevC.79.034303</a>.</h6>
-		<h6>[6] Z. P. Li, T. Niks&#774;ic&#769;, D. Vretenar, J. Meng, G. A. Lalazissis, P. Ring, Phys. Rev. C 79 (2009) 054301. <a href="http://doi.org/10.1103/PhysRevC.79.054301">doi:10.1103/PhysRevC.79.054301</a>.</h6>
+		<h6>[5] P. W. Zhao, Z. P. Li, J. M. Yao, and  J. Meng, Phys. Rev. C 82 (2010) 054319. <a href="https://doi.org/10.1103/PhysRevC.82.054319">doi.org/10.1103/PhysRevC.82.054319</a>.</h6>		
+		<h6>[6] Y. Tian, Z. Y. Ma, and P. Ring, Phys. Lett. B 676 (2009) 44. <a href="https://doi.org/10.1016/j.physletb.2009.04.067">doi.org/10.1016/j.physletb.2009.04.067</a></h6>
+		<h6>[7] T. Niks&#774;ic&#769;, Z. P. Li, D. Vretenar, L. Pro&#769;ochniak, J. Meng, P. Ring, Phys. Rev. C 79 (2009) 034303. <a href="http://doi.org/10.1103/PhysRevC.79.034303">doi:10.1103/PhysRevC.79.034303</a>.</h6>
+		<h6>[8] Z. P. Li, T. Niks&#774;ic&#769;, D. Vretenar, J. Meng, G. A. Lalazissis, P. Ring, Phys. Rev. C 79 (2009) 054301. <a href="http://doi.org/10.1103/PhysRevC.79.054301">doi:10.1103/PhysRevC.79.054301</a>.</h6>
 	  </div>
 	  <div class="col-sm-2" align=center>&nbsp;</div>
 	</div>
