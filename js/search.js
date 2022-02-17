@@ -39,12 +39,12 @@ function clientProperty(){
     imagePos = findPos(document.getElementById('nuclear_chart'));
 	var elementName= new Array("Neutron","Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","Nitrogen","Oxygen","Fluorine","Neon","Sodium","Magnesium","Aluminum","Silicon","Phosphorus","Sulfur","Chlorine","Argon","Potassium","Calcium","Scandium","Titanium","Vanadium","Chromium","Manganese","Iron","Cobalt","Nickel","Copper","Zinc","Gallium","Germanium","Arsenic","Selenium","Bromine","Krypton","Rubidium","Strontium","Yttrium","Zirconium","Niobium","Molybdenum","Technetium","Ruthenium","Rhodium","Palladium","Silver","Cadmium","Indium","Tin","Antimony","Tellurium","Iodine","Xenon","Cesium","Barium","Lanthanum","Cerium","Praseodymium","Neodymium","Promethium","Samarium","Europium","Gadolinium","Terbium","Dysprosium","Holmium","Erbium","Thulium","Ytterbium","Lutetium","Hafnium","Tantalum","Tungsten","Rhenium","Osmium","Iridium","Platinum","Gold","Mercury","Thallium","Lead","Bismuth","Polonium","Astatine","Radon","Francium","Radium","Actinium","Thorium","Protactinium","Uranium","Neptunium","Plutonium","Americium","Curium","Berkelium","Californium","Einsteinium","Fermium","MEndelevium","Nobelium","Lawrencium","Rutherfordium","Dubnium","Seaborgium");
     var elementSymbol= new Array("N","H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg");
-  var drip=new Array(104);
-  for (var i=1;i<105;i++)
+  var drip=new Array(106);
+  for (var i=1;i<107;i++)
   {
   drip[i]=new Array(2);
   }
-  for (var i=1;i<105;i++)
+  for (var i=1;i<107;i++)
   {
   	drip[i][1]="-1000";
   	drip[i][2]="-1000";
@@ -112,7 +112,7 @@ function clientProperty(){
   if (flag<=0) flag=-1;
   var div1 = document.getElementById('result');
   div1.innerHTML = "<div class='row'>Click on a nuclide below</div>";
-  if ((xReturn>0) && (yReturn>0) && (flag<0)) {
+  if ((xReturn>0) && (yReturn>0) && (flag<0) && (zNum<=104) && (zNum>8)) {
   div1.innerHTML = "<div class='row'><sup><sup>"+aNum+"</sup></sup>"+elementSymbol[zNum]+' (Z='+zNum+', N='+nNum+')'+"</div>";
   }
   }
@@ -175,13 +175,17 @@ if (flag==-1) {
 	var div6 = document.getElementById('E_RHB');
 	div6.innerHTML = "<h5>E<sub>RHB</sub> = -"+Number(obs[2]).toFixed(2)+" MeV</h5>";
 	
-	var div6 = document.getElementById('E_5DCH');
+	div6 = document.getElementById('E_5DCH');
 	div6.innerHTML = "<h5>E<sub>5DCH</sub> = -"+Number(obs[3]).toFixed(2)+" MeV</h5>";
 	
-	var div6 = document.getElementById('beta');
+	div6 = document.getElementById('E_exp');
+	if (isNaN(obs[4]))  {div6.innerHTML = "<h5>E<sub>exp</sub> = "+obs[4]+"</h5>";}
+	if (!isNaN(obs[4])) {div6.innerHTML = "<h5>E<sub>exp</sub> = -"+Number(obs[4]).toFixed(2)+" MeV</h5>";}
+	
+	div6 = document.getElementById('beta');
 	div6.innerHTML = "<h5>&beta; = "+Number(obs[0]).toFixed(2)+"</h5>";
 	
-	var div6 = document.getElementById('gamma');
+	div6 = document.getElementById('gamma');
 	div6.innerHTML = "<h5>&gamma; = "+obs[1]+"<sup>o</sup></h5>";
 	  }
 }
@@ -208,12 +212,12 @@ function elementZN(name){
 
 function linkZN(cZ, cN){
   var m="./index.html";
-  var drip=new Array(104);
-  for (var i=1;i<105;i++)
+  var drip=new Array(106);
+  for (var i=1;i<107;i++)
     {
      drip[i]=new Array(2);
     }
-  for (var i=1;i<105;i++)
+  for (var i=1;i<107;i++)
     {
         drip[i][1]="-1000";
         drip[i][2]="-1000";
@@ -274,7 +278,8 @@ function linkZN(cZ, cN){
   d3=ix%2-1;
   d4=iy%2-1;
   flag=d1*d2*d3*d4;
-  if ((iy < 8) || (iy > 104)) {alert("Proton number out of range 8<=Z<=104!");var m="./index.html#detailedResults";return m;}
+  if (iy < 8) {alert("Proton number out of range 8<=Z<=104!");var m="./index.html#detailedResults";return m;}
+  if (iy > 104) {alert("Proton number out of range 8<=Z<=104!");var m="./index.html#detailedResults";return m;}
   if (d3 == 0) {alert("Please search an even-even nuclide !");var m="./index.html#detailedResults";return m;}
   if (d4 == 0) {alert("Please search an even-even nuclide !");var m="./index.html#detailedResults";return m;}
   if (flag>0) flag=1;
@@ -346,13 +351,17 @@ function linkZN(cZ, cN){
 	var div6 = document.getElementById('E_RHB');
 	div6.innerHTML = "<h5>E<sub>RHB</sub> = -"+Number(obs[2]).toFixed(2)+" MeV</h5>";
 	
-	var div6 = document.getElementById('E_5DCH');
+	div6 = document.getElementById('E_5DCH');
 	div6.innerHTML = "<h5>E<sub>5DCH</sub> = -"+Number(obs[3]).toFixed(2)+" MeV</h5>";
 	
-	var div6 = document.getElementById('beta');
+	div6 = document.getElementById('E_exp');
+	if (isNaN(obs[4]))  {div6.innerHTML = "<h5>E<sub>exp</sub> = "+obs[4]+"</h5>";}
+	if (!isNaN(obs[4])) {div6.innerHTML = "<h5>E<sub>exp</sub> = -"+Number(obs[4]).toFixed(2)+" MeV</h5>";}
+	
+	div6 = document.getElementById('beta');
 	div6.innerHTML = "<h5>&beta; = "+Number(obs[0]).toFixed(2)+"</h5>";
 	
-	var div6 = document.getElementById('gamma');
+	div6 = document.getElementById('gamma');
 	div6.innerHTML = "<h5>&gamma; = "+obs[1]+"<sup>o</sup></h5>";
   }
   
