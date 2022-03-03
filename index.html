@@ -16,10 +16,10 @@
   
   <header class="navbar navbar-light bg-faded navbar-static-top" >
     <div class="clearfix">
-      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+      <button class="navbar-toggler hidden-xs-up hidden-sm-up hidden-md-up hidden-lg-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
         &#9776;
       </button>    </div>
-    <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <div class="collapse navbar-toggleable-xs navbar-toggleable-md navbar-toggleable-lg" id="bd-main-nav">
       <ul class="nav navbar-nav">
         <a class="nav-item nav-link active" href="./index.html"><b>Home</b> </a>
 		<a class="nav-item nav-link" href="./theory.html">Theoretical framework </a>
@@ -37,11 +37,10 @@
 		  
         </li>
 		-->
-		<a class="nav-item nav-link" href="https://doi.org/10.1103/PhysRevC.104.054312"><b>Publication: Y. L. Yang, Y. K. Wang, P. W. Zhao, and Z. P. Li, Phys. Rev. C 104, 054312 (2021)</b></a>
 	  </ul>
 	  
       <ul class="nav navbar-nav pull-xs-right ">
-        <li class="nav-item btn-group">
+        <!--<li class="nav-item btn-group">
           <a class="dropdown-toggle nav-link" id="dropdownMenu2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Links
           </a>
@@ -50,7 +49,8 @@
             <a class="dropdown-item" href="http://www.pku.edu.cn">Peking University</a>
 			<a class="dropdown-item" href="http://www.swu.edu.cn/">Southwest University</a>
           </div>
-        </li>
+        </li>-->
+		<a class="nav-item nav-link" href="https://doi.org/10.1103/PhysRevC.104.054312"><b>Publication: Y. L. Yang, Y. K. Wang, P. W. Zhao, and Z. P. Li, Phys. Rev. C 104, 054312 (2021)</b></a>
       </ul>
     </div>
   </header>
@@ -58,31 +58,30 @@
   <!-- Jumbotron -->  
   <!-- Jumbotron -->
   <div class="jumbotron">
-  <div class="container">
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
     <div class="row">
-	  <div class="col-sm-2" align='right'><a href="http://www.pku.edu.cn"><img src="./img/PKU.jpeg" height='100', width='100'></img></a></div>
-	  <div class="col-sm-8" align=center>
+	  <div class="col-lg-2" align='right'><a href="http://www.pku.edu.cn"><img src="./img/PKU.jpeg" height='100', width='100'></img></a></div>
+	  <div class="col-lg-8" align=center>
 	    <div class="row">&nbsp;</div>
 		<div class="row">&nbsp;</div>
 	    <div class="row"><h3><font color="black">Triaxial Relativistic Hartree-Bogoliubov Results with the PC-PK1 Density Functional</font></h3></div>
 	  </div>
-	  <div class="col-sm-2" align='left'><a href="http://www.swu.edu.cn"><img src="./img/SWU.jpeg" height='100', width='100'></img></a></div>
+	  <div class="col-lg-2" align='left'><a href="http://www.swu.edu.cn"><img src="./img/SWU.jpeg" height='100', width='100'></img></a></div>
 	</div>
 	<div class="row">
-	  <div class="col-sm-12" align=center>
+	  <div class="col-lg-12" align=center>
 	    &nbsp;
 	  </div>
 	</div>
 	<div class="row">
-	  <div class="col-sm-12" align=center>
+	  <div class="col-lg-12" align=center>
 	    &nbsp;
 	  </div>
 	</div>
 	<div class="row">
-	  <div class="col-sm-3 col-xs-1" align=center>&nbsp;</div>
-	  <div class="col-sm-6" align=center>
+	  <div class="col-lg-3" align=center>&nbsp;</div>
+	  <div class="col-lg-6" align=center>
 	  <div class="row">
 	    <form class="form-inline">
 		  <div class="form-group">
@@ -97,7 +96,7 @@
 	  </div>
 	  <div class="row">&nbsp;</div>
 	  </div>
-	  <div class="col-sm-3" align=center>
+	  <div class="col-lg-3" align=center>
 	    <h6><div id="result" class="alert alert-info"> 
 		<div class="row" >Click on a nuclide below</div>
 		</div></h6>
@@ -106,13 +105,11 @@
 	
 	<div class="row">&nbsp;</div>
 	
-    <div class="row">
-      <div class="col-sm-12" align=center>
-        <a href="Javascript:nzNum()"><img id="nuclear_chart" src="./img/nucl_chart.png" style="cursor: crosshair; width:100%; height:auto;"></a>
-      </div>
+    <div class="row" align=center>
+        <a href="Javascript:nzNum()"><img id="nuclear_chart" src="./img/nucl_chart.png" style="cursor: crosshair; width:80%; height:auto;"></a>
 		<!--
 		<div class="row">
-		  <div class="col-sm-12" align=center>
+		  <div class="col-lg-12" align=center>
 		  <h4>Select an isotopic chain</h4>
 		    <form class="form-horizontal">
 		    <div class="form-group">
@@ -126,7 +123,7 @@
 		  </div>
 		</div>
 		<div class="row">
-		  <div class="col-sm-12" align=center>
+		  <div class="col-lg-12" align=center>
 		  <h4>Select an isotonic chain</h4>
 		    <form class="form-horizontal">
 		    <div class="form-group">
@@ -146,37 +143,24 @@
 	<div class="row">&nbsp;</div>
 	<div class="row" id="detailedResults">&nbsp;</div>
   </div>
-  </div>
   
   <!-- Jumbotron -->
   <div class="jumbotron">
     <div class="row" >&nbsp;</div>
-    <div class="row">
-	  <div class="col-sm-4" align=center>
-	  <h3><font color="black"><div id="detail_title">Results for a nuclide (Z= , N= )</div></font></h3>
-	  </div>
-	  <div class="col-sm-4" align=center>
-	    <nav aria-label="Page navigation">
-		  <ul class="nav nav-pills">
-		    <a class="nav-item nav-link active" href="index.html#detailedResults">Ground-state properties</a>
-			<a class="nav-item nav-link">Spectroscopy (coming soon)</a>
-		  </ul>
-		</nav>
-	  </div>
-	  <div class="col-sm-4" align=center>
-	    &nbsp;
-	  </div>
-	</div>
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
     <div class="row">
-      <div class="col-sm-4" align=center>
+      <div class="col-lg-5" align=center>
 		  <div class="row">
-		  <img id="detail" class="img-responsive center-block" src="./img/Empty_pes.png" style="width: 80%;height: auto;" >
+			<h3><font color="black"><div id="detail_title">Results for a nuclide (Z= , N= )</div></font></h3>
 		  </div>
 		  <div class="row">&nbsp;</div>
 		  <div class="row">
-		    <div class="col-sm-8 col-sm-offset-2" align="left">
+		  <img id="detail" class="img-responsive center-block" src="./img/Empty_pes.png" style="width: 60%;height: auto;" >
+		  </div>
+		  <div class="row">&nbsp;</div>
+		  <div class="row">
+		    <div class="col-lg-8 col-lg-offset-2" align="left">
 		    <h6 class="p1">Potential energy surface calculated by RHB theory with PC-PK1 density functional.
 		    All energies are normalized with respect to the binding energy of the absolute minimum. 
 		    The contours join points on the surface with the same energy, and the energy difference between adjacent contours is 0.5 MeV.</h5>
@@ -190,59 +174,60 @@
 		  -->
       </div>
 	  
-	  <div class="col-sm-3">
-		<div class="row">
-		  <div class="col-sm-12" align=center>
-	      <h5><b>Ground-state properties</b></h5>
-	      </div>
-		</div>
-		<div class="row">
-		  <div class="col-sm-12" align=center>
-	      &nbsp;
-	      </div>
-		</div>
+	  <div class="col-lg-2">
+	    <div class="row" align=center>
+			<nav aria-label="Page navigation">
+			<ul class="nav nav-pills nav-stacked">
+		    <h6><b><a class="nav-item nav-link active" href="index.html#detailedResults">Ground-state properties</a></b></h6>
+			<h6><b><a class="nav-item nav-link">Spectroscopy (coming soon)</a></b></h6>
+			</ul>
+			</nav>
+	    </div>
+		<div class="row">&nbsp;</div>
 		<div class="row" alt="Ground-state energy given by RHB calculations (MeV)" title="Ground-state energy given by RHB calculations (MeV)">
-		  <div class="col-sm-12" id="E_RHB" align=left>
+		  <div class="col-lg-12" id="E_RHB" align=left>
 	      <h5>E<sub>RHB</sub> = </h5>
 	      </div>
 		</div>
 		<div class="row" alt="Ground-state energy given by 5DCH calculations (MeV)" title="Ground-state energy given by 5DCH calculations (MeV)">
-		  <div class="col-sm-12" id="E_5DCH" align=left>
+		  <div class="col-lg-12" id="E_5DCH" align=left>
 	      <h5>E<sub>5DCH</sub> = </h5>
 	      </div>
 		</div>
 		<div class="row" alt="Ground-state energy given by AME2020 (MeV)" title="Ground-state energy given by AME2020 (MeV)">
-		  <div class="col-sm-12" id="E_exp" align=left>
+		  <div class="col-lg-12" id="E_exp" align=left>
 	      <h5>E<sub>exp</sub> = </h5>
 	      </div>
 		</div>
 		<div class="row" alt="Quadrupole deformation given by RHB calculations" title="Quadrupole deformation given by RHB calculations">
-		  <div class="col-sm-12" id="beta" align=left>
+		  <div class="col-lg-12" id="beta" align=left>
 	      <h5>&beta; = </h5>
 	      </div>
 		</div>
 		<div class="row" alt="Triaxial deformation given by RHB calculations (degrees)" title="Triaxial deformation given by RHB calculations (degrees)">
-		  <div class="col-sm-12" id="gamma" align=left>
+		  <div class="col-lg-12" id="gamma" align=left>
 	      <h5>&gamma; = <sup>o</sup></h5>
 	      </div>
 		</div>
 		<div class="row">
-		  <div class="col-sm-12" align=center>
+		  <div class="col-lg-12" align=center>
 	      &nbsp;
 	      </div>
 		</div>
 		<div class="row">
-		  <div class="col-sm-12" align=left>
+		  <div class="col-lg-12" align=left>
 	      <h6 class="p1">To know the meaning of a quantity, 
 		  please <b>hold the mouse still</b> on it.</h6>
 	      </div>
 		</div>
       </div>
 	  
-	  <div class="col-sm-5" id="select_nucleus">
+	  <div class="col-lg-5" id="select_nucleus">
+	     <div class="row">&nbsp;</div>
+		 <div class="row">&nbsp;</div>
 	    <div class="row">
-		  <div class="col-sm-3">&nbsp;</div>
-		  <div class="col-sm-5" align=center>
+		  <div class="col-lg-3">&nbsp;</div>
+		  <div class="col-lg-5" align=center>
             <h4>Select a nuclide</h4>
 		    <form class="form-horizontal">
 		    <div class="form-group">
@@ -258,61 +243,61 @@
 		    </div>
 		    </form>
 		  </div>
-		  <div class="col-sm-4">&nbsp;</div>
+		  <div class="col-lg-4">&nbsp;</div>
 		</div>
 		
 		<div class="row">&nbsp;</div>
 		
 		<div class="row">
-		  <div class="col-sm-11" id="up-Z" align="center">
+		  <div class="col-lg-11" id="up-Z" align="center">
 		  <h5>&nbsp;&nbsp;<sup><sup>A+2</sup></sup><big>Z+2</big></h5>
 		  </div>
-		  <div class="col-sm-1">&nbsp;</div>
+		  <div class="col-lg-1">&nbsp;</div>
 		</div>
 		
         <div class="row">
-		  <div class="col-sm-5">&nbsp;</div>
-		  <div class="col-sm-1" align="center">
+		  <div class="col-lg-5">&nbsp;</div>
+		  <div class="col-lg-1" align="center">
 		    <button type="button" class="btn btn-info " aria-label="up" onclick="document.location=changeZN(document.getElementById('detail').src,1)" onsubmit="changeZN(document.getElementById('detail').src,1)">
 		      <h4><span class="glyphicon glyphicon-arrow-up"></span></h4>
 		    </button>
 		  </div>
-		  <div class="col-sm-6">&nbsp;</div>
+		  <div class="col-lg-6">&nbsp;</div>
 		</div>
 		
 		<div class="row">
-		  <div class="col-sm-4" id="left-N" align="right"><h5><sup><sup>A-2</sup></sup><big>Z</big></h5></div>
-		  <div class="col-sm-1" align="center">
+		  <div class="col-lg-4" id="left-N" align="right"><h5><sup><sup>A-2</sup></sup><big>Z</big></h5></div>
+		  <div class="col-lg-1" align="center">
 		    <button type="button" class="btn btn-info  " aria-label="left" onclick="document.location=changeZN(document.getElementById('detail').src,2)" onsubmit="changeZN(document.getElementById('detail').src,2)">
 		      <h4><span class="glyphicon glyphicon-arrow-left"></span></h4>
 		    </button>
 		  </div>
-		  <div class="col-sm-1">&nbsp;</div>
-		  <div class="col-sm-1" align="center">
+		  <div class="col-lg-1">&nbsp;</div>
+		  <div class="col-lg-1" align="center">
 		    <button type="button" class="btn btn-info  " aria-label="right" onclick="document.location=changeZN(document.getElementById('detail').src,3)" onsubmit="changeZN(document.getElementById('detail').src,3)">
 		      <h4><span class="glyphicon glyphicon-arrow-right"></span></h4>
 		    </button>
 		  </div>
-		  <div class="col-sm-5" id="right-N" align="left"><h5>&nbsp;&nbsp;<sup><sup>A+2</sup></sup><big>Z</big></h5></div>
+		  <div class="col-lg-5" id="right-N" align="left"><h5>&nbsp;&nbsp;<sup><sup>A+2</sup></sup><big>Z</big></h5></div>
 		</div>
 		
 		<div class="row">
-		  <div class="col-sm-5">&nbsp;</div>
-		  <div class="col-sm-1" align="center">
+		  <div class="col-lg-5">&nbsp;</div>
+		  <div class="col-lg-1" align="center">
 		    <button type="button" class="btn btn-info " aria-label="down" onclick="document.location=changeZN(document.getElementById('detail').src,4)" onsubmit="changeZN(document.getElementById('detail').src,4)">
 		      <h4><span class="glyphicon glyphicon-arrow-down"></span></h4>
 		    </button>
 		  </div>
-		  <div class="col-sm-6">&nbsp;</div>
+		  <div class="col-lg-6">&nbsp;</div>
 		</div>
 		
 		<div class="row">&nbsp;</div>
 		
 		<div class="row">
-		  <div class="col-sm-11" id="down-Z" align="center">
+		  <div class="col-lg-11" id="down-Z" align="center">
 		  <h5>&nbsp;&nbsp;<sup><sup>A-2</sup></sup><big>Z-2</big></h5>
 		  </div>
-		  <div class="col-sm-1">&nbsp;</div>
+		  <div class="col-lg-1">&nbsp;</div>
 		</div>
 		
 	  </div>
