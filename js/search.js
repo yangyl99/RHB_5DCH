@@ -393,7 +393,8 @@ function changeZN(a,b) {
     var N = a.slice(N1+1,D);
     var Z=parseInt(Z);
     var N=parseInt(N);
-    if (b==1) {Z=Z+2; m=linkZN(Z,N); return m;}
+	if (b==0) {Z=Z+0; m=linkZN(Z,N); return m;}
+    else if (b==1) {Z=Z+2; m=linkZN(Z,N); return m;}
     else if (b==2) {N=N-2; m=linkZN(Z,N); return m;}
     else if (b==3) {N=N+2; m=linkZN(Z,N); return m;}
     else {Z=Z-2; m=linkZN(Z,N); return m;}
