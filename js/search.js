@@ -197,17 +197,29 @@ return m;
 
 function elementZN(name){
 	var elementSymbol= new Array("N","H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg");
-	var idx = 0;
+	var idx = -1;
+	var idEl = -1;
 	var cc = "cc";
 	for (var i=0;i<name.length;i++){
 		cc = name.charAt(i);
-		if (!isNaN(cc)) {
+		if (!isNaN(cc) && idx == -1) {
 		idx = i;
-		break
+		}
+		if (isNaN(cc) && idEl == -1) {
+		idEl = i;
 		}
 	}
-	var symbol = name.slice(0, idx);
-	var aNum = name.slice(idx, name.length);
+	var symbol = "sym";
+	var aNum = "A";
+	if (idx == 0) {
+		symbol = name.slice(idEl, name.length);
+		aNum = name.slice(0, idEl);
+	}
+	
+	else {
+		symbol = name.slice(0, idx);
+		aNum = name.slice(idx, name.length);
+	}
 	var zNum = elementSymbol.indexOf(symbol);
 	var m = linkZN(parseInt(zNum), parseInt(aNum)-parseInt(zNum));
 	return m;
