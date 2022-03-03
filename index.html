@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- no change for the above declarations>-->
     <title>Triaxial Relativistic Hartree-Bogoliubov Results with the PC-PK1 Density Functional</title>
    
@@ -14,7 +14,7 @@
 
   <body onload="clientProperty()">
   
-  <header class="navbar navbar-light navbar-fixed-top bg-faded navbar-static-top" >
+  <header class="navbar navbar-light bg-faded navbar-static-top" >
     <div class="clearfix">
       <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
         &#9776;
@@ -60,6 +60,7 @@
   <!-- Jumbotron -->  
   <!-- Jumbotron -->
   <div class="jumbotron">
+  <div class="container">
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
     <div class="row">
@@ -82,7 +83,7 @@
 	  </div>
 	</div>
 	<div class="row">
-	  <div class="col-sm-3" align=center>&nbsp;</div>
+	  <div class="col-sm-3 col-xs-1" align=center>&nbsp;</div>
 	  <div class="col-sm-6" align=center>
 	  <div class="row">
 	    <form class="form-inline">
@@ -98,7 +99,7 @@
 	  </div>
 	  <div class="row">&nbsp;</div>
 	  </div>
-	  <div class="col-sm-2" align=center>
+	  <div class="col-sm-3" align=center>
 	    <h6><div id="result" class="alert alert-info"> 
 		<div class="row" >Click on a nuclide below</div>
 		</div></h6>
@@ -109,7 +110,7 @@
 	
     <div class="row">
       <div class="col-sm-12" align=center>
-        <a href="Javascript:nzNum()"><img id="nuclear_chart" src="./img/nucl_chart.png" style="cursor: crosshair" height="513" width="1309"></a>
+        <a href="Javascript:nzNum()"><img id="nuclear_chart" src="./img/nucl_chart.png" style="cursor: crosshair; width:100%; height:auto;"></a>
       </div>
 		<!--
 		<div class="row">
@@ -141,12 +142,12 @@
 		  </div>
 		</div>
 		-->
-	  </div>
-    </div>
+	</div>
 	
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<div class="row" id="detailedResults">&nbsp;</div>
+  </div>
   </div>
   
   <!-- Jumbotron -->
@@ -173,7 +174,7 @@
     <div class="row">
       <div class="col-sm-5" align=center>
 		  <div class="row">
-		  <img id="detail" class="img-responsive center-block" src="./img/Empty_pes.png" height="447" width="587" >
+		  <img id="detail" class="img-responsive center-block" src="./img/Empty_pes.png" style="width: 100%;height: auto;" >
 		  </div>
 		  <div class="row">&nbsp;</div>
 		  <div class="row">
@@ -352,7 +353,6 @@
     </script>
   <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
  -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>--->
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./js/obs.js"></script>
   
