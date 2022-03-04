@@ -1,18 +1,3 @@
-
-function transform(CC,t){
-for (var i=0;i<CC.length;i++){
-   if (isNaN(CC.charAt(i))) {
-     CC="k";
-     if (t==1) {
-        alert("Enter a positive integer number of protons !");
-               }
-     if (t==2) {
-        alert("Enter a positive integer number of neutrons !");
-               }
-}}
-   return CC;
-}
-
 function findPos(el) {
     var x = y = 0;
     if(el.offsetParent) {
@@ -196,7 +181,7 @@ return m;
 }
 
 function elementZN(name){
-	var elementSymbol= new Array("N","H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg");
+	var elementSymbol= new Array("N","H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Nh","Fl","Mc","Lv","Ts","Og");
 	var idx = -1;
 	var idEl = -1;
 	var cc = "cc";
@@ -220,19 +205,31 @@ function elementZN(name){
 		symbol = name.slice(0, idx);
 		aNum = name.slice(idx, name.length);
 	}
-	var zNum = elementSymbol.indexOf(symbol);
-	var m = linkZN(parseInt(zNum), parseInt(aNum)-parseInt(zNum));
-	return m;
+	if ((idx == -1) || (idEl == -1)) {
+		return linkZN(999, 0);
+	}
+	else {
+		var zNum = elementSymbol.indexOf(symbol);
+		if (zNum == -1) {
+		 	return linkZN(999, 0);
+		}
+		else {
+			var m = linkZN(parseInt(zNum), parseInt(aNum)-parseInt(zNum));
+			return m;
+		}
+	}
+	
 }
 
 function linkZN(cZ, cN){
+  if (parseInt(cZ) == 999) {alert("Please enter the nuclide name with right format, e.g., 'O16', '100Sn'");var m="./index.html";return m;}
   var m="./index.html";
-  var drip=new Array(106);
-  for (var i=1;i<107;i++)
+  var drip=new Array(125);
+  for (var i=1;i<124;i++)
     {
      drip[i]=new Array(2);
     }
-  for (var i=1;i<107;i++)
+  for (var i=1;i<124;i++)
     {
         drip[i][1]="-1000";
         drip[i][2]="-1000";
