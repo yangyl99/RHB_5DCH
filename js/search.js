@@ -108,7 +108,8 @@ function clientProperty(){
   
   
 function nzNum(){
-    window.location.href=mapZN(zNum,nNum,flag);
+    //window.location.href=mapZN(zNum,nNum,flag);
+	mapZN(zNum,nNum,flag);
 }
 
 
