@@ -58,8 +58,6 @@
   <!-- Jumbotron -->  
   <!-- Jumbotron -->
   <div class="jumbotron">
-	<div class="row">&nbsp;</div>
-	<div class="row">&nbsp;</div>
     <div class="row">
 	  <div class="col-lg-2" align='right'><a href="http://www.pku.edu.cn"><img src="./img/PKU.jpeg" height='100', width='100'></img></a></div>
 	  <div class="col-lg-8" align=center>
@@ -83,7 +81,7 @@
 	  <div class="col-lg-3" align=center>&nbsp;</div>
 	  <div class="col-lg-6" align=center>
 	  <div class="row">
-	    <form class="form-inline">
+	    <form onkeydown="if(event.keyCode==13){return false;}" class="form-inline">
 		  <div class="form-group">
 		    <label for="element"><b>&nbsp;&nbsp;Search a nuclide:&nbsp;&nbsp;</label>
 	        <input type="text" class="form-control" name="element" placeholder="e.g. O16, 100Sn">
@@ -138,10 +136,12 @@
 		</div>
 		-->
 	</div>
-	
-	<div class="row">&nbsp;</div>
-	<div class="row">&nbsp;</div>
-	<div class="row" id="detailedResults">&nbsp;</div>
+	<div class="row" id="detailedResults">
+	  <div class="col-lg-9" align=right>&nbsp;</div>
+	  <div class="col-lg-3" align=center>
+	  <div class="alert alert-success" role="alert"><h5>For the searched results please see below.</h5></div>
+	  </div>
+	</div>
   </div>
   
   <!-- Jumbotron -->
