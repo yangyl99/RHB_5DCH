@@ -251,7 +251,7 @@
 		      <input type="text" class="form-control" name="nNum" value="0" size="2">
 		    </div>
 		    <div class="form-group">
-		      <button type="button" class="btn btn-primary" onclick="document.location=linkZN(this.form.zNum.value,this.form.nNum.value)" onsubmit="document.location=linkZN(this.form.zNum.value,this.form.nNum.value)"> Submit </button>
+		      <button type="button" class="btn btn-primary" onclick="linkZN(this.form.zNum.value,this.form.nNum.value)" onsubmit="linkZN(this.form.zNum.value,this.form.nNum.value)"> Submit </button>
 		    </div>
 		    </form>
 		  </div>
@@ -270,7 +270,7 @@
         <div class="row">
 		  <div class="col-lg-5">&nbsp;</div>
 		  <div class="col-lg-1" align="center">
-		    <button type="button" class="btn btn-info " aria-label="up" onclick="document.location=changeZN(document.getElementById('detail').src,1)" onsubmit="changeZN(document.getElementById('detail').src,1)">
+		    <button type="button" class="btn btn-info " aria-label="up" onclick="changeZN(document.getElementById('detail').src,1)" onsubmit="changeZN(document.getElementById('detail').src,1)">
 		      <h4><span class="glyphicon glyphicon-arrow-up"></span></h4>
 		    </button>
 		  </div>
@@ -280,13 +280,13 @@
 		<div class="row">
 		  <div class="col-lg-4" id="left-N" align="right"><h5><sup><sup>A-2</sup></sup><big>Z</big></h5></div>
 		  <div class="col-lg-1" align="center">
-		    <button type="button" class="btn btn-info  " aria-label="left" onclick="document.location=changeZN(document.getElementById('detail').src,2)" onsubmit="changeZN(document.getElementById('detail').src,2)">
+		    <button type="button" class="btn btn-info  " aria-label="left" onclick="changeZN(document.getElementById('detail').src,2)" onsubmit="changeZN(document.getElementById('detail').src,2)">
 		      <h4><span class="glyphicon glyphicon-arrow-left"></span></h4>
 		    </button>
 		  </div>
 		  <div class="col-lg-1">&nbsp;</div>
 		  <div class="col-lg-1" align="center">
-		    <button type="button" class="btn btn-info  " aria-label="right" onclick="document.location=changeZN(document.getElementById('detail').src,3)" onsubmit="changeZN(document.getElementById('detail').src,3)">
+		    <button type="button" class="btn btn-info  " aria-label="right" onclick="changeZN(document.getElementById('detail').src,3)" onsubmit="changeZN(document.getElementById('detail').src,3)">
 		      <h4><span class="glyphicon glyphicon-arrow-right"></span></h4>
 		    </button>
 		  </div>
@@ -296,7 +296,7 @@
 		<div class="row">
 		  <div class="col-lg-5">&nbsp;</div>
 		  <div class="col-lg-1" align="center">
-		    <button type="button" class="btn btn-info " aria-label="down" onclick="document.location=changeZN(document.getElementById('detail').src,4)" onsubmit="changeZN(document.getElementById('detail').src,4)">
+		    <button type="button" class="btn btn-info " aria-label="down" onclick="changeZN(document.getElementById('detail').src,4)" onsubmit="changeZN(document.getElementById('detail').src,4)">
 		      <h4><span class="glyphicon glyphicon-arrow-down"></span></h4>
 		    </button>
 		  </div>
