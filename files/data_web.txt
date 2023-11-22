@@ -18,7 +18,14 @@ lamb_p		Proton Fermi surface (MeV)
 R_m		Matter root-mean-square radius (fm)															
 R_n		Neutron root-mean-square radius (fm)															
 R_p		Proton root-mean-square radius (fm)															
-R_c		Charge radius (fm)															
+R_c		Charge radius (fm)
+
+References
+----------
+[1] Y. L. Yang, Y. K. Wang, P. W. Zhao, and Z. P. Li, Physical Review C 104, 054312 (2021)	
+[2] Y. L. Yang, P. W. Zhao, and Z. P. Li, Physical Review C 107, 024308 (2023)			
+
+PS: The following results can be copied to Excel or text files. We are going to provide a Fortran format in the future.																				
 																	
 Elt.	Z	N	beta	gamma	B_RHB	B_5DCH	E_corr	S_2n	S_2p	lamb_n	lamb_p	R_m	R_n	R_p	R_c		
 O	8	6	0.00 	0	98.63 	98.63 	0.00 	####	####	-16.98 	-2.50 	2.553 	2.422 	2.648 	2.766 		
